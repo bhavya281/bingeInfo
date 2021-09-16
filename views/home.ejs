@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BingeFlix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="StyleSheet/style.css" />
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <nav class="navbar sticky-top navbar-expand-md navbar-dark" id="nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Binge<span>Flix</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="/movies">Movies</a>
+                    <a class="nav-link" href="/series">Series</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="container">
+            <h1>BingeFlix</h1>
+            <form id="form">
+                <input type="text" id="search" class="search" placeholder="Search to Binge Watch">
+            </form>
+        </div>
+    </div>
+    <section class="container content" id="section">
+        <h2 id="heading">Trending</h2>
+        <main id="trendingMain"></main>
+    </section>
+    <div class="pagination">
+        <div class="page" id="prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="page" id="current">1</div>
+        <div class="page" id="next"><i class="fas fa-chevron-right"></i></div>
+    </div>
+    <footer class="footer py-3 mt-auto" style="background-color: #222;">
+        <div class="container">
+            <span style="color:#fff;">&copy; BingeFlix 2021</span>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="/JavaScript/tScript.js"></script>
+</body>
+
+</html>

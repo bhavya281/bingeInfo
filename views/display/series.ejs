@@ -1,0 +1,30 @@
+<% layout('layout/boilerplate')%>
+    <link rel="stylesheet" href="/StyleSheet/sstyle.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <section class="container filter">
+        <div class="genre-filter" id="tags">
+            <div class="tag">Action</div>
+        </div>
+    </section>
+    <section class="container drop-down">
+        <label for="option" class="sort-heading">Sort </label>
+        <select id="option" name="option">
+            <option value="popularity.desc">Popularity Descending</option>
+            <option value="popularity.asc">Popularity Ascending</option>
+            <option value="vote_average.desc">Rating Descending</option>
+            <option value="vote_average.asc">Rating Ascending</option>
+        </select>
+    </section>
+    <section class="container content">
+        <h2 id="heading">Trending Series</h2>
+        <main id="seriesMain"></main>
+    </section>
+    <div class="pagination">
+        <div class="page" id="prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="page" id="current">1</div>
+        <div class="page" id="next"><i class="fas fa-chevron-right"></i></div>
+    </div>
+
+    <script src="/JavaScript/sScript.js"></script>
