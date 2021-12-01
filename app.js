@@ -17,6 +17,9 @@ app.get('/movies', (req, res) => {
 app.get('/series', (req, res) => {
     res.render('display/series')
 })
+app.get('/random', (req, res) => {
+    res.render('display/random')
+})
 app.listen(3000, () => {
     console.log("port 3000")
 })

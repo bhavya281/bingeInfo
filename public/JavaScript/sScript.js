@@ -1,9 +1,11 @@
 const API_URL = 'https://api.themoviedb.org/3/discover/tv?api_key=137bc42109a9931aa754bc9cfe372f53&language=en-US'
 const IMG_PATH = 'https://image.tmdb.org/t/p/w1280'
+const SEARCH_API = 'https://api.themoviedb.org/3/search/tv?api_key=137bc42109a9931aa754bc9cfe372f53&language=en-US&query="'
 
 const main = document.getElementById('seriesMain')
 const tagsEl = document.getElementById('tags')
 const option = document.getElementById('option')
+const search = document.getElementById('search')
 
 const prev = document.getElementById('prev')
 const next = document.getElementById('next')
@@ -156,6 +158,18 @@ function getClassByRate(vote) {
         return 'red'
     }
 }
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const searchTerm = search.value
+    if (searchTerm && searchTerm !== '') {
+        getSeries(SEARCH_API + searchTerm)
+        search.value = ''
+        document.getElementById("heading").innerHTML = `<br><br>Search result for the  <span class="search-result">${searchTerm}</span>`;
+        document.getElementById('section').scrollIntoView({ behavior: 'smooth' });
+    } else {
+        window.location.reload()
+    }
+})
 prev.addEventListener('click', () => {
     if (prevPage > 0) {
         pageCall(prevPage);

@@ -47,46 +47,63 @@ body {
   color: #c0392b;
   font-weight: bold;
 }
-
 main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 30px;
 }
-
-.hero {
-  background-image: url("movie-posters-wallpapers.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+.carousel-item{
   height: 100vh;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  margin-bottom: 20px;
-  z-index: -2;
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
 }
-
-.hero::before {
-  content: '';
+.carousel-item::before{
+  content: "";
+  display: block;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+  right: 0;
+  background: #000;
+  opacity: 0.7;
+}
+.carousel-caption{
+  top:30%;
+  padding-left:20%;
+  padding-right:20%;
+}
+.carousel-caption h5{
+  font-size: 45px;
+  font-weight: 600;
+}
+.carousel-caption p{
+  font-size: 15px;
+  top:2rem;
+}
+.slider-btn .btn{
+  font-size: 15px;
+  background-color: #c0392b;
+  color: #eee;
+  padding: 8px 15px;
+margin-left: 10px;
+border-radius:10px;
+margin-bottom: 15px;
+}
+.slider-btn .btn:hover{
+  background-color: #222;
 }
 .search {
   background-color: transparent;
   border: 2px solid #c0392b;
   border-radius: 50px;
   font-family: inherit;
-  font-size: 1.3rem;
+  font-size: 18px;
   padding: 0.5rem 1rem;
   color: #fff;
 }
@@ -101,15 +118,6 @@ main {
   color: #c0392b;
   text-transform: capitalize;
   font-weight: bold;
-}
-.hero h1 {
-  font-size: 55px;
-  margin: -20px 0 20px;
-  text-shadow: 5px 5px 8px #c0392b;
-}
-.hero p {
-  font-size: 20px;
-  letter-spacing: 1px;
 }
 #heading{
   margin-top: 30px;
@@ -138,7 +146,6 @@ main {
   padding: 0.5rem 1rem 1rem;
   letter-spacing: 0.5px;
 }
-
 .trending-info h3{
   margin-top: 0;
   color: #222;
@@ -154,19 +161,15 @@ main {
   padding: 0.25rem 0.5rem;
   font-weight: bold;
 }
-
 .trending-info span.green {
   color: lightgreen;
 }
-
 .trending-info span.orange {
   color: orange;
 }
-
 .trending-info span.red {
   color: red;
 }
-
 .overview {
   background-color: #fff;
   padding: 2rem;
@@ -179,7 +182,6 @@ main {
   overflow-y: auto;
   transition: transform 0.3s ease-in;
 }
-
 .trending:hover .overview {
   transform: translateY(0);
 }

@@ -47,6 +47,27 @@ body {
   color: #c0392b;
   font-weight: bold;
 }
+.search {
+  background-color: transparent;
+  border: 2px solid #c0392b;
+  border-radius: 50px;
+  font-family: inherit;
+  font-size: 18px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+.search::placeholder {
+  color: #fff;
+}
+.search:focus {
+  outline: none;
+  background-color: #c0392b;
+}
+.search-result{
+  color: #c0392b;
+  text-transform: capitalize;
+  font-weight: bold;
+}
 #myBtn {
   display: none;
   position: fixed;
