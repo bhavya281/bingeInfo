@@ -1,7 +1,8 @@
 # BingeInfo
 A Movie and Series Application which provides the details of the search movie or series, with overview and rating. This application also displays the trending movie and series and we can filter out based on genre and sort out.
 <br>The Trending list and details of the movie and series are fetched with the help of <a href="https://developers.themoviedb.org/3/getting-started/introduction">TMDB API</a>.
-Application deployed with the help of Heroku and Developed with NodeJS.
+Application deployed with the help of Heroku and Developed with NodeJS.<br>
+![BingeInfo Landing page](/public/image/readmeImages/Capture.PNG)
 
 ## Link to the Application
 Check the live demo of <a href="https://binge-info.herokuapp.com/">BingeInfo</a>.
